@@ -1,0 +1,487 @@
+//////////////////////// Sass Prerequisites //////////////////////////
+// scrollbar and selection restyling
+@import "_scrollbar";
+// colors
+$midBlue: #00a2eb;
+$dimBlue: #017ab1;
+$lightBlue: #9be0ff;
+$veryLightBlue: #e8f8ff;
+$purple: #4a007e;
+$darkPurple: #1b002e;
+
+// picture
+$picOfMe: url("../images/picofme-bg-grey.png");
+// necessary mixins
+@mixin border-radius($val...) {
+	-ms-border-radius: $val;
+	-moz-border-radius: $val;
+	-webkit-border-radius: $val;
+	border-radius: $val;
+}
+@mixin box-shadow($val...) {
+	-ms-box-shadow: $val;
+	-moz-box-shadow: $val;
+	-webkit-box-shadow: $val;
+	box-shadow: $val;
+}
+@mixin transformR($val...) {
+	-ms-transform: rotate($val);
+	-moz-transform: rotate($val);
+	-webkit-transform: rotate($val);
+	transform: rotate($val);
+}
+@mixin transformS($val) {
+	-ms-transform: scale($val);
+	-moz-transform: scale($val);
+	-webkit-transform: scale($val);
+	transform: scale($val);
+}
+@mixin transformT($val...) {
+	-ms-transform: translate($val);
+	-moz-transform: translate($val);
+	-webkit-transform: translate($val);
+	transform: translate($val);
+}
+@mixin transformST($val1, $val2...) {
+	-ms-transform: scale($val1) translate($val2);
+	-moz-transform: scale($val1) translate($val2);
+	-webkit-transform: scale($val1) translate($val2);
+	transform: scale($val1) translate($val2);
+}
+@mixin media-min($val) {
+	@media screen and (min-width: $val) {
+		@content;
+	}
+}
+@mixin media-max($val) {
+	@media screen and (max-width: $val) {
+		@content;
+	}
+}
+@mixin animation($name, $time, $itter) {
+	/*moz*/
+  -moz-animation: $name $time linear 0s $itter normal running;
+  /*webkit*/
+  -webkit-animation: $name $time linear 0s $itter normal running;
+  /*standard*/
+  animation: $name $time linear 0s $itter normal running;
+}
+@mixin keyframes($val) {
+	/*---- media query for $val ----*/
+	@-moz-keyframes #{$val} {
+		@content;
+	}
+	@-webkit-keyframes #{$val} {
+		@content;
+	}
+	@keyframes #{$val} {
+		@content;
+	}
+}
+///////////////////// Main Styling /////////////////////////////////
+/*///////////////////////// prerequisites /////////////////////////*/
+/* css resets */
+* {
+	font-family: sans-serif;
+	transition: all .2s ease-in-out;
+}
+a {
+	text-decoration: none;
+	color: $darkPurple;
+	font-weight: bold;
+}
+
+body {
+	margin: 0;
+	background: $lightBlue;
+	margin-top: 4em;
+}
+
+ul, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none
+}
+header, section, footer {
+	display: block;
+}
+.a-tag {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.parent {
+	position: relative;
+}
+#loading-icon {
+	position: fixed;
+	top: 49.5%;
+	left: 49.5%;
+	margin: 0em auto;
+	width: -3em;
+	height: 3em;
+	border: .5em solid $darkPurple;
+	border-color: $darkPurple transparent $darkPurple transparent;
+	@include border-radius(100%);
+}
+section {
+	position: relative;
+	padding: 14em 0;
+}
+.section-colored {
+	background: $midBlue;
+}
+.page-wrap {
+	position: relative;
+	display: block;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.pad1-top {
+	padding: 4em 0 0em;
+}
+.pad1-even {
+	padding: 2em 0 2em;
+}
+.pad1-bottom {
+	padding: 0em 0 4em;
+}
+.img-contain img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.img-cover img{
+	max-width: 100%;
+	text-align: center;
+}
+.mid-blue {
+	color: $midBlue;
+}
+.mid-blue-bg {
+	background: $midBlue;
+}
+.dim-blue {
+	color: $dimBlue;
+}
+.dim-blue-bg {
+	background: $dimBlue;
+}
+.light-blue {
+	color: $lightBlue;
+}
+.light-blue-bg {
+	background: $lightBlue;
+}
+.very-light-blue {
+	color: $veryLightBlue;
+}
+.very-light-blue-bg {
+	background: $veryLightBlue;
+}
+.purple {
+	color: $purple;
+}
+.purple-bg {
+	background: $purple;
+}
+.dark-purple {
+	color: $darkPurple;
+}
+.dark-purple-bg {
+	background: $darkPurple;
+}
+.underline {
+	text-decoration: underline;
+}
+.left-justify {
+	text-align: left;
+}
+.center-justify {
+	text-align: center;
+}
+.right-justify {
+	text-align: right;
+}
+.large-text {
+	font-size: 3em;
+}
+.big-text {
+	font-size: 2.5em;
+}
+.med-text {
+	font-size: 2em;
+}
+.inc-md-size-text {
+	font-size: 1.5em;
+}
+.inc-sm-size-text {
+	font-size: 1.2em;
+}
+.bolding {
+	font-weight: bold;
+}
+.col-two {
+	width: 50%;
+}
+.col-three {
+	width: 33%;
+}
+.inliner {
+	display: inline-block;
+}
+.line-spacer {
+	margin: .5em auto;
+	max-width: 50%;
+	height: 4px;
+}
+.button {
+	display: inline-block;
+	padding: .5em .5em .4em;
+	@include border-radius(1em);
+	background: $dimBlue;
+	color: $veryLightBlue;
+	vertical-align: text-bottom;
+}
+/*///////////////////////// content styling /////////////////////////*/
+/* header ----------------------------*/
+header {
+	z-index: 4;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4em;
+	background: $midBlue;
+	@include box-shadow(inset 0 2em 0 0 $purple);
+}
+#logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 11em;
+	height: 100%;
+	background: url("../images/logo.png") no-repeat;
+	background-size: contain;
+}
+nav {
+	position: absolute;
+	bottom: 0;
+	right: 2em;
+	@include box-shadow(2em 0 0 0 $veryLightBlue);
+	span {
+		display: inline-block;
+	}
+}
+.nav-item {
+	display: inline-block;
+	text-align: center;
+	font-size: .8em;
+	font-weight: bold;
+	padding: .7em .5em;
+	color: $veryLightBlue;
+	border-left: 2px solid $veryLightBlue;
+	border-right: 2px solid $veryLightBlue;
+	nav > &:first-child {
+		border-left: 0px solid $veryLightBlue;
+	}
+	&:last-child {
+		border-right: 0px solid $veryLightBlue;
+	}
+}
+#sub-nav {
+	position: absolute;
+	top: 2em;
+	left: 0;
+	height: 0;
+	width: 7.2em;
+	//display: none;
+	overflow-y: hidden;
+	background: $midBlue;
+	li {
+		font-size: .8em;
+		text-align: center;
+		span {
+			padding: .5em .5em;
+			color: $veryLightBlue;
+		}
+	}
+}
+.hover-fill {
+	@include box-shadow(inset 0 -.0em 0 0 $veryLightBlue);
+}
+body.home #home.hover-fill,
+body.about #about.hover-fill,
+body.portfolio #portfolio.hover-fill,
+body.webs #webs.hover-fill,
+body.logos #logos.hover-fill,
+body.jerseys #jerseys.hover-fill,
+body.socials #socials.hover-fill,
+body.outros #outros.hover-fill,
+body.overlays #overlays.hover-fill,
+body.webp #webp.hover-fill,
+body.blog #blog.hover-fill,
+body.pens #pens.hover-fill{
+	@include box-shadow(inset 0 -.2em 0 0 $veryLightBlue);
+}
+/* body ------------------------------*/
+#page-insertion {
+	z-index: 0;
+}
+/* home */
+.front-page-button {
+	margin: 0 auto;
+}
+.picofme-bg:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $picOfMe no-repeat;
+	background-position: left top;
+	background-size: cover;
+	opacity: .3;
+}
+.previews {
+	position: relative;
+	text-align: center;
+}
+.previews div {
+	margin: 0 auto;
+	max-height: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+/* footer ----------------------------*/
+footer {
+	position: relative;
+	margin-top: 2em;
+	background: $midBlue;
+	height: 7em;
+	.std-footer-text {
+		position: absolute;
+		display: inline-block;
+		color: $veryLightBlue;
+		left: 1em;
+		bottom: 1em;
+		span {
+			color: $veryLightBlue;
+		}
+	}
+	#social-icons {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		padding: .3em .4em .1em;
+		@include border-radius(.5em);
+		background: $lightBlue;
+		div {
+			display: inline-block;
+			margin: .2em;
+		}
+	}
+}
+
+/* hover events -----------------------*/
+@include media-min(800px) {
+	.parent:hover #sub-nav {
+		height: 12em;
+	}
+	.hover-fill:hover{
+		@include box-shadow(inset 0 -6em 0 0 $veryLightBlue !important);
+		color: $midBlue !important;
+	}
+	.hover-fill:hover .a-tag {
+		color: $midBlue !important;
+	}
+}
+/*//////////////////////// media queries ////////////////////////*/
+@include media-max(800px) {
+	#mo-nav {
+	  position: fixed;
+	  top: .3em;
+	  right: .3em;
+	  width: 3em;
+	  height: 3em;
+	  border: .2em solid $veryLightBlue;
+	  border-radius: 10px;
+	  transitions: all 0s;
+	}
+	#mo-nav div {
+	  background: $veryLightBlue;
+	  height: .5em;
+	  margin: .4em .2em;
+	  border-radius: 2em;
+	}
+	nav {
+		position: absolute;
+		display: none;
+		top: 100%;
+		right: 0;
+		@include box-shadow(0 0 0 0 transparent);
+		width: 49.7%;
+		background: $lightBlue;
+		span {
+			display: block;
+		}
+	}
+	.nav-item {
+		display: block;
+		border-left: 2px solid $veryLightBlue;
+		border-right: 2px solid $veryLightBlue;
+		background: $midBlue;
+		nav > &:first-child {
+			border-left: 2px solid $veryLightBlue;
+			border-top: 2px solid $veryLightBlue;
+		}
+		&:last-child {
+			border-right: 2px solid $veryLightBlue;
+			border-bottom: 2px solid $veryLightBlue;
+		}
+	}
+	#sub-nav {
+		position: absolute;
+		display: none;
+		top: 0em;
+		left: initial;
+		right: 100%;
+		height: 0;
+		width: 100%;
+		border: 2px solid $veryLightBlue;
+	}
+	.open {
+		display: block !important;
+		height: auto !important;
+	}
+	footer {
+		height: 9em;
+	}
+	/* hover events -----------------------*/
+	.hover-fill:hover{
+		@include box-shadow(inset 0 -6em 0 0 $veryLightBlue !important);
+		color: $midBlue !important;
+	}
+	.hover-fill:hover .a-tag {
+		color: $midBlue !important;
+	}
+}
+@include media-max(740px) {
+	
+}
+/*//////////////////////// animations ////////////////////////*/
+/* loading icon */
+#loading-icon {
+	@include animation(spin, .3s, infinite);
+}
+@include keyframes(spin) {
+	0% {
+		@include transformR(0deg);
+	}
+	100% {
+		@include transformR(360deg);
+	}
+}
