@@ -81,7 +81,7 @@ $picOfMe: url("../images/picofme-bg-grey.png");
 ///////////////////// Main Styling /////////////////////////////////
 /*///////////////////////// prerequisites /////////////////////////*/
 /* css resets */
-* {
+*, *:before, *:after {
 	font-family: sans-serif;
 	transition: all .2s ease-in-out;
 	box-sizing: border-box;
@@ -131,6 +131,7 @@ header, section, footer {
 .separator {
 	display: block;
 	height: 4px;
+	margin: 2em 0;
 }
 section {
 	position: relative;
@@ -165,8 +166,14 @@ section {
 .padding-1 {
 	padding: .5em !important;
 }
+.padding-2 {
+	padding: 1em !important;
+}
 .margin-1 {
 	margin: .5em !important;
+}
+.margin-2 {
+	margin: 1em !important;
 }
 .mid-blue {
 	color: $midBlue;
@@ -215,6 +222,17 @@ section {
 }
 .right-justify {
 	text-align: right;
+}
+@include media-max(800px) {
+	.left-justify-mobile {
+		text-align: left;
+	}
+	.center-justify-mobile {
+		text-align: center;
+	}
+	.right-justify-mobile {
+		text-align: right;
+	}
 }
 .align-top {
 	vertical-align: top;
@@ -363,6 +381,7 @@ body.pens #pens.hover-fill{
 #page-insertion {
 	z-index: 0;
 }
+
 /* home */
 .front-page-button {
 	margin: 0 auto;
@@ -388,6 +407,36 @@ body.pens #pens.hover-fill{
 	max-height: 100%;
 	text-align: center;
 	overflow: hidden;
+}
+/* bio */
+.valid {
+	box-shadow: 0 0 0 2px rgba(0, 255, 240, 1)
+}
+.invalid {
+	box-shadow: 0 0 0 2px rgba(255, 0, 0, 1)
+}
+#ct-box input, #ct-box textarea {
+  margin: 0 auto 1em;
+  border-radius: 1em;
+  background-color: white;
+  border: 0 solid $lightBlue;
+  font-size: 1.3em;
+  padding: .1em .5em;
+  transition: all 0s;
+}
+#ct-box {
+	input {
+	  width: 100%;
+	  max-width: 20em;
+  }
+	textarea {
+	  width: 100%;
+	  resize: vertical;
+	}
+	input:last-child {
+	  width: 5em;
+	  height: 2em;
+	}
 }
 /* footer ----------------------------*/
 footer {
@@ -415,6 +464,20 @@ footer {
 		div {
 			display: inline-block;
 			margin: .2em;
+		}
+	}
+}
+#social-icons, .social-icons {
+	a {
+		position: relative;
+		&:before {
+			content: url("../images/new-win2.png");
+			position: absolute;
+			left: 0;
+			opacity: 0;
+		}
+		&:hover:before {
+			opacity: .7;
 		}
 	}
 }
@@ -491,6 +554,21 @@ footer {
 	footer {
 		height: 10em;
 	}
+	/* bio */
+	#ct-box {
+	input {
+	  width: 100%;
+	  max-width: 100%;
+  }
+	textarea {
+	  width: 100%;
+	  resize: vertical;
+	}
+	input:last-child {
+	  width: 100%;
+	  height: 2em;
+	}
+}
 	/* hover events -----------------------*/
 	.hover-fill:hover{
 		@include box-shadow(inset 0 -6em 0 0 $veryLightBlue !important);
@@ -500,9 +578,7 @@ footer {
 		color: $midBlue !important;
 	}
 }
-@include media-max(740px) {
-	
-}
+
 /*//////////////////////// animations ////////////////////////*/
 /* loading icon */
 #loading-icon {
