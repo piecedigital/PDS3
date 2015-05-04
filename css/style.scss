@@ -36,6 +36,12 @@ $picOfMe: url("../images/picofme-bg-grey.png");
 	-webkit-transform: scale($val);
 	transform: scale($val);
 }
+@mixin transformRS($rot, $scale...) {
+	-ms-transform: rotate( $rot ) scale( $scale );
+	-moz-transform: rotate( $rot ) scale( $scale );
+	-webkit-transform: rotate( $rot ) scale( $scale );
+	transform: rotate( $rot ) scale( $scale );
+}
 @mixin transformT($val...) {
 	-ms-transform: translate($val);
 	-moz-transform: translate($val);
@@ -78,6 +84,12 @@ $picOfMe: url("../images/picofme-bg-grey.png");
 		@content;
 	}
 }
+@mixin background-gradient($deg, $colors...) {
+	-ms-background: linear-gradient($deg, $colors);
+	-moz-background: linear-gradient($deg, $colors);
+	-webkit-background: linear-gradient($deg, $colors);
+	background: linear-gradient($deg, $colors);
+}
 ///////////////////// Main Styling /////////////////////////////////
 /*///////////////////////// prerequisites /////////////////////////*/
 /* css resets */
@@ -105,6 +117,10 @@ ul, h1, h2, h3, h4, h5, h6 {
 
 li {
 	list-style: none
+}
+.unset {
+	padding: 0;
+	margin: 0;
 }
 header, section, footer {
 	display: block;
@@ -269,6 +285,9 @@ section {
 	display: inline-block;
 	width: 33%;
 }
+.blocker {
+	display: block;
+}
 .inliner {
 	display: inline-block;
 }
@@ -382,7 +401,7 @@ body.pens #pens.hover-fill{
 	z-index: 0;
 }
 
-/* home */
+/* home /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
 .front-page-button {
 	margin: 0 auto;
 }
@@ -408,7 +427,7 @@ body.pens #pens.hover-fill{
 	text-align: center;
 	overflow: hidden;
 }
-/* bio */
+/* bio /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
 .valid {
 	box-shadow: 0 0 0 2px rgba(0, 255, 240, 1)
 }
@@ -437,6 +456,54 @@ body.pens #pens.hover-fill{
 	  width: 5em;
 	  height: 2em;
 	}
+}
+/* portfolio /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
+.portfolio-container {
+	display: block;
+	margin: 0 auto;
+	max-width: 64em;
+}
+.no-event {
+	pointer-events: none;
+}
+.yes-event {
+	pointer-events: initial;
+}
+.item-box {
+	position: relative;
+	display: inline-block;
+	margin: .5em;
+	width: 20em;
+	height: 20em;
+	overflow: hidden;
+	background: $midBlue;
+	&:before {
+		z-index: 1;
+		content: "";
+		opacity: .7;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include background-gradient(45deg, transparent, $veryLightBlue, transparent);
+	}
+	&:after {
+		z-index: 1;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		box-shadow: inset 0 0 0 .4em $midBlue;
+	}
+}
+.total-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transformT(-50%, -50%);
 }
 /* footer ----------------------------*/
 footer {
@@ -493,6 +560,9 @@ footer {
 .hover-fill:hover .a-tag {
 	color: $midBlue !important;
 }
+.item-box:hover:before {
+	opacity: .8;
+}
 /*//////////////////////// media queries ////////////////////////*/
 @include media-max(800px) {
 	#mo-nav {
@@ -504,12 +574,12 @@ footer {
 	  border: .2em solid $veryLightBlue;
 	  border-radius: 10px;
 	  transitions: all 0s;
-	}
-	#mo-nav div {
-	  background: $veryLightBlue;
-	  height: .5em;
-	  margin: .4em .2em;
-	  border-radius: 2em;
+		& div {
+		  background: $veryLightBlue;
+		  height: .5em;
+		  margin: .3em .2em;
+		  border-radius: 2em;
+		}
 	}
 	nav {
 		position: absolute;

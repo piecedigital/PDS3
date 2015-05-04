@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "divAlt": "Wireframe - Piece Digital",
+      "subtitle": "Portfolio Page - Wireframe",
+      "imgDesc": "webs/pds2/misc3-desc.txt",
+      "imgSrc": "webs/pds2/wireframe - portfolio.png",
+      "imgAlt": "Portfolio Page - Wireframe"
+    },
+    {
+      "divAlt": "Wireframe - Piece Digital",
+      "subtitle": "Bio page v2 - Wireframe",
+      "imgDesc": "webs/pds2/misc4-desc.txt",
+      "imgSrc": "webs/pds2/wireframe - bio2.png",
+      "imgAlt": "Bio Page v2 - Wireframe"
+    },
+    {
+      "divAlt": "Wireframe - Piece Digital",
+      "subtitle": "Bio page v1 - Wireframe",
+      "imgDesc": "webs/pds2/pds-webs-desc.txt",
+      "imgSrc": "webs/pds2/wireframe - bio.png",
+      "imgAlt": "Bio Page v1 - Wireframe"
+    },
+    {
+      "divAlt": "Wireframe - Piece Digital",
+      "subtitle": "Home Page - Wireframe",
+      "imgDesc": "webs/pds2/pds-webs-desc.txt",
+      "imgSrc": "webs/pds2/wireframe - homepage.png",
+      "imgAlt": "Home Page - Wireframe"
+    },
+    {
+      "divAlt": "Mock-up - Piece Digital",
+      "subtitle": "Portfolio Page - Mockup",
+      "imgDesc": "webs/pds2/pds-webs-desc.txt",
+      "imgSrc": "webs/pds2/mock-up - portfolio(no open pic).png",
+      "imgAlt": "Portfolio Page - Mockup"
+    },
+    {
+      "divAlt": "Mock-up - Piece Digital",
+      "subtitle": "Portfolio Page - Mockup",
+      "imgDesc": "webs/pds2/pds-webs-desc.txt",
+      "imgSrc": "webs/pds2/mock-up - portfolio(open pic).png",
+      "imgAlt": "Portfolio Page- Mockup"
+    },
+    {
+      "divAlt": "Mock-up - Piece Digital",
+      "subtitle": "Bio Page v2 - Mockup",
+      "imgDesc": "webs/pds2/pds-webs-desc.txt",
+      "imgSrc": "webs/pds2/mock-up - bio2.png",
+      "imgAlt": "Bio Page v2 - Mockup"
+    },
+    {
+      "divAlt": "Mock-up - Piece Digital",
+      "subtitle": "Bio Page v1 - Mockup",
+      "imgDesc": "webs/pds2/pds-webs-desc.txt",
+      "imgSrc": "webs/pds2/mock-up - bio1.png",
+      "imgAlt": "Bio Page v1 - Mockup"
+    },
+    {
+      "divAlt": "Mock-up - Piece Digital",
+      "subtitle": "Home Page - Mockup",
+      "imgDesc": "webs/pds2/pds-webs-desc.txt",
+      "imgSrc": "webs/pds2/mock-up - homepage.png",
+      "imgAlt": "Home Page - Mockup"
+    },
+    {
+      "divAlt": "Wireframe",
+      "subtitle": "Portfolio Page - Wireframe",
+      "imgDesc": "webs/mnh2/mnh-webs-desc.txt",
+      "imgSrc": "webs/mnh2/wireframe - portfolio.png",
+      "imgAlt": "Wireframe"
+    },
+    {
+      "divAlt": "Wireframe",
+      "subtitle": "Testimonials Page - Wireframe",
+      "imgDesc": "webs/mnh2/mnh-webs-desc.txt",
+      "imgSrc": "webs/mnh2/wireframe - testimonials.png",
+      "imgAlt": "Wireframe"
+    },
+    {
+      "divAlt": "Wireframe",
+      "subtitle": "Home Page - Wireframe",
+      "imgDesc": "webs/mnh2/mnh-webs-desc.txt",
+      "imgSrc": "webs/mnh2/wireframe - index.png",
+      "imgAlt": "Wireframe"
+    },
+    {
+      "divAlt": "Mock-up",
+      "subtitle": "Portfolio Page - Mockup",
+      "imgDesc": "webs/mnh2/mnh-webs-desc.txt",
+      "imgSrc": "webs/mnh2/mockup - portfolio.png",
+      "imgAlt": "Mock-up"
+    },
+    {
+      "divAlt": "Mock-up",
+      "subtitle": "Testimonials Page - Mockup",
+      "imgDesc": "webs/mnh2/mnh-webs-desc.txt",
+      "imgSrc": "webs/mnh2/mockup - testimonials.png",
+      "imgAlt": "Mock-up"
+    },
+    {
+      "divAlt": "Mock-up",
+      "subtitle": "Home Page - Mockup",
+      "imgDesc": "webs/mnh2/mnh-webs-desc.txt",
+      "imgSrc": "webs/mnh2/mockup - index.png",
+      "imgAlt": "Mock-up"
+    },
+    {
+      "divAlt": "freecodechat",
+      "subtitle": "Free Code Chat",
+      "imgDesc": "webs/fcchat/fcchat-desc.txt",
+      "imgSrc": "webs/fcchat/fcchat-screenshot.png",
+      "imgAlt": "free code chat screenshot"
+    }
+  ]
+}
