@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "Team Predator Gaming - Jersey",
+      "imgDesc": "jerseys/tpg/tpg-j.txt",
+      "imgSrc": "jerseys/tpg/back.png",
+      "imgAlt": "Team Preditor Gaming jersey design - back"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "Team Predator Gaming - Jersey",
+      "imgDesc": "jerseys/tpg/tpg-j.txt",
+      "imgSrc": "jerseys/tpg/front.png",
+      "imgAlt": "Team Preditor Gaming jersey design - front"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "VAIO HQ - Jersey",
+      "imgDesc": "jerseys/vaio/tpg-j.txt",
+      "imgSrc": "jerseys/vaio/back.png",
+      "imgAlt": "Vaio HQ jersey design - back"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "VAIO HQ - Jersey",
+      "imgDesc": "jerseys/vaio/tpg-j.txt",
+      "imgSrc": "jerseys/vaio/front.png",
+      "imgAlt": "Vaio HQ jersey design - front"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "ABD - Jersey",
+      "imgDesc": "jerseys/abd/abd-j.txt",
+      "imgSrc": "jerseys/abd/back.png",
+      "imgAlt": "Angry Ball Dude jersey design - back"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "ABD - Jersey",
+      "imgDesc": "jerseys/abd/abd-j.txt",
+      "imgSrc": "jerseys/abd/front.png",
+      "imgAlt": "Angry Ball Dude jersey design - front"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "Prophecy Team - Jersey",
+      "imgDesc": "jerseys/proph/proph-j.txt",
+      "imgSrc": "jerseys/proph/d4.png",
+      "imgAlt": "Prophecy team apparel design 4"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "Prophecy Team - Jersey",
+      "imgDesc": "jerseys/proph/proph-j.txt",
+      "imgSrc": "jerseys/proph/d3.png",
+      "imgAlt": "Prophecy team apparel design 3"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "Prophecy Team - Jersey",
+      "imgDesc": "jerseys/proph/proph-j.txt",
+      "imgSrc": "jerseys/proph/d2.png",
+      "imgAlt": "Prophecy team apparel design 2"
+    },
+    {
+      "divAlt": "eSports team jersey design",
+      "subtitle": "Prophecy Team - Jersey",
+      "imgDesc": "jerseys/proph/proph-j.txt",
+      "imgSrc": "jerseys/proph/d1.png",
+      "imgAlt": "Prophecy team apparel design 1"
+    }
+  ],
+  "disclaimerList": ["Prophecy Team"]
+}
