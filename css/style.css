@@ -638,6 +638,36 @@ body.pens #pens.hover-fill {
 #blog-next-btn {
   border-radius: 1em 2em 2em 1em; }
 
+.img-sourced {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-height: 40em;
+  text-align: center; }
+  .img-sourced img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1em solid #00a2eb;
+    border-bottom: 2em solid #00a2eb;
+    border-radius: .5em; }
+  .img-sourced a {
+    position: absolute;
+    bottom: 1.7em;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: #e8f8ff;
+    font-weight: bold; }
+
+#disqus_thread {
+  background: #9be0ff;
+  border-radius: .8em;
+  padding: 1em; }
+
 /* footer ----------------------------*/
 footer {
   position: relative;
