@@ -576,9 +576,6 @@ body.pens #pens.hover-fill{
   background: rgba(0, 0, 0, .2);
 	width: 18%;
 	height: 100%;
-	&:hover {
-		background: rgba(0, 150, 240, .4);
-	}
 	& > div {
 		pointer-events: none;
 		position: relative;
@@ -589,14 +586,22 @@ body.pens #pens.hover-fill{
 			top: 50%;
 			left: 50%;
 			@include transformT(-50%, -50%);
+			border-bottom: 2em solid transparent;
+  		border-top: 2em solid transparent;
 		}
 	}
 }
 #port-prev-btn {
 	left: 0;
+	& > div div {
+  border-right: 2em solid rgba(0, 0, 0, .5);
+	}
 }
 #port-next-btn {
 	right: 0;
+	& > div div {
+  border-left: 2em solid rgba(0, 0, 0, .5);
+	}
 }
 #description {
 	position: fixed;
@@ -757,6 +762,21 @@ footer {
 .item-box:hover:before {
 	opacity: .8;
 }
+#port-prev-btn, #port-next-btn {
+	&:hover {
+		background: rgba(0, 150, 240, .4);
+	}
+}
+#port-prev-btn {
+	& > div div {
+  border-right: 2em solid rgba(0, 200, 255, .7);
+	}
+}
+#port-next-btn {
+	& > div div {
+  border-left: 2em solid rgba(0, 200, 255, .7);
+	}
+}
 /*//////////////////////// media queries ////////////////////////*/
 @include media-max(1040px) {
 	.item-box {
@@ -841,8 +861,8 @@ footer {
 	/* body */
 	/* portfolio */
 	.item-box {
-		width: 27em;
-		height: 27em;
+		width: 25em;
+		height: 25em;
 	}
 	/* footer */
 	footer {
