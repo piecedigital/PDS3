@@ -563,10 +563,13 @@ body.pens #pens.hover-fill{
 	@include transformT(-50%, -50%);
 	width: 70%;
 	height: 60%;
+	text-align: center;
+	pointer-events: none;
 	& img {
 		box-shadow: 0 0 0 .2em $midBlue;
 		border-radius: .4em;
 		background: $lightBlue;
+		pointer-events: auto;
 	}
 }
 #port-prev-btn, #port-next-btn {
@@ -644,6 +647,16 @@ body.pens #pens.hover-fill{
 	box-shadow: 0 0 0 .2em $midBlue;
 	color: $veryLightBlue;
 	border-radius: .4em;
+}
+#disclaimer {
+	margin: 2em 0 0; 
+	text-align: center;
+	& span {
+		display: block;
+		color: red;
+		font-size: .7em;
+		margin: 2em 0 0;
+	}
 }
 /* blog /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
 .blogs-container {

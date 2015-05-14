@@ -20,12 +20,12 @@ $(document).ready(function() {
 	
 	//nav clicks
 	$(document).on("click", ".a-tag", function() {
-		console.log("clicked a-tag");
-		console.log( $(this).data("href") );
+		//console.log("clicked a-tag");
+		//console.log( $(this).data("href") );
 		if( $(this).data("href") ) {
 			var page = $(this).data("href");
 			var blogQuery = $(this).data("blogquery") || "";
-			console.log("link had: " + page);
+			//console.log("link had: " + page);
 			pageLoader(page, blogQuery);
 			pushState(page, blogQuery);
 			$("nav").removeClass("open");
@@ -46,6 +46,7 @@ $(document).ready(function() {
 		  	$("body").attr("class", $("#page").attr("class") );
 		  	//console.log( $("#page").attr("class") );
 		  	$("meta[property='og:url']").attr("content", window.location.href);
+		  	document.body.scrollTop = 0;
 			},
 	    error: function(errmsg1, errmsg2, errmsg3) {
 	      $("#loading-icon").hide();
@@ -64,8 +65,8 @@ $(document).ready(function() {
 			historyIndex++;
 			history[historyIndex] = page;
 			history = history.slice(0, historyIndex+1);
-			console.log(history);
-			console.log("page index: " +historyIndex);
+			//console.log(history);
+			//console.log("page index: " +historyIndex);
 		}
 	}
 	function replaceState(page, blogPost) {
@@ -73,7 +74,7 @@ $(document).ready(function() {
 			blogPost = blogPost || "";
 			window.history.replaceState({}, page, "" + page + ".html" + blogPost );
 			history[historyIndex] = page;
-			console.log(history);
+			//console.log(history);
 		}
 	}
 	// nav bar

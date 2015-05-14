@@ -524,11 +524,14 @@ body.pens #pens.hover-fill {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 70%;
-  height: 60%; }
+  height: 60%;
+  text-align: center;
+  pointer-events: none; }
   #img-box img {
     box-shadow: 0 0 0 0.2em #00a2eb;
     border-radius: .4em;
-    background: #9be0ff; }
+    background: #9be0ff;
+    pointer-events: auto; }
 
 #port-prev-btn, #port-next-btn {
   position: fixed;
@@ -610,6 +613,15 @@ body.pens #pens.hover-fill {
   box-shadow: 0 0 0 0.2em #00a2eb;
   color: #e8f8ff;
   border-radius: .4em; }
+
+#disclaimer {
+  margin: 2em 0 0;
+  text-align: center; }
+  #disclaimer span {
+    display: block;
+    color: red;
+    font-size: .7em;
+    margin: 2em 0 0; }
 
 /* blog /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
 .blogs-container {
