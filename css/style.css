@@ -684,6 +684,10 @@ body.pens #pens.hover-fill {
   border-radius: .8em;
   padding: 1em; }
 
+/* pens /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-*/
+.pens-container div {
+  margin: 0 1em; }
+
 /* footer ----------------------------*/
 footer {
   position: relative;
