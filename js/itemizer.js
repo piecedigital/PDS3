@@ -40,37 +40,62 @@ $(document).ready(function(){
    function() {
       $("#description").toggleClass("desc-open");
   });
+  function prev() {
+    position--;
+    if(position < 0) { position = itemObj.items.length-1;}
+    openLightbox();
+  }
+  function next() {
+    position++;
+    if(position > itemObj.items.length-1) { position = 0;}
+    openLightbox();
+  }
   $(document).on("click", "#port-prev-btn",
-   function() {
-      position--;
-      if(position < 0) { position = itemObj.items.length-1;}
-      openLightbox();
+    function() {
+      prev();
   });
   $(document).on("click", "#port-next-btn",
-   function() {
-      position++;
-      if(position > itemObj.items.length-1) { position = 0;}
-      openLightbox();
+    function() {
+      next();
+    });
+  $(document).keydown(function(key) {
+    switch(key.keyCode){
+      case 27:
+        preCloser();
+        console.log("escape key pressed");
+      break;
+      case 37:
+        prev();
+        console.log("left key pressed");
+      break;
+      case 39:
+        next();
+        console.log("right key pressed");
+      break;
+      case 73:
+        $("#description").toggleClass("desc-open");
+        console.log("description opened");
+      break;
+    };
   });
   // lightbox
   function openLightbox() {
-    console.log(position);
-    console.log(itemObj.items);
-    console.log(itemObj.items[position]);
-    console.log(itemObj.items[position].imgSrc);
+    // console.log(position);
+    // console.log(itemObj.items);
+    // console.log(itemObj.items[position]);
+    // console.log(itemObj.items[position].imgSrc);
     $.ajax({
       url: "images/" + itemObj.items[position].imgDesc,
       dataType: "text",
       success: function(data2) {
         $("#lightbox").addClass("lightbox-open");
         $("#img-box").html( "<img src='images/" + itemObj.items[position].imgSrc + "' alt='" + itemObj.items[position].imgAlt + "'>" );
-        $("#description").html( itemObj.items[position].imgDesc );
+        $("#description").html( data2 );
         $("#subtitle").text( itemObj.items[position].subtitle );
       }
     });
   }
   function closeLightbox() {
-    console.log()
     $("#lightbox").removeClass("lightbox-open");
     $("#img-box").html("");
     $("#description").html("");
