@@ -354,13 +354,13 @@ header {
 	width: 100%;
 	height: 4em;
 	background: $midBlue;
-	@include box-shadow(inset 0 2em 0 0 $purple);
+	@include box-shadow(inset 0 2em 0 0 $dimBlue);
 }
 #logo {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 11em;
+	width: 12em;
 	height: 100%;
 	background: url("../images/logo.png") no-repeat;
 	background-size: contain;
