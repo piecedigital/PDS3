@@ -19,11 +19,13 @@ $(document).ready(function(){
               "<div class='blog-body'>" + blogs[post].body + "</div>"+
             "</div>"+
             "<div class='separator2 dim-blue-bg'></div>"+
+            "<p>Share this blog: </p> <a class='twitter-share-button' href='https://twitter.com/share' data-url='https://piecedigital.github.io/blogpost?blog=" + (post+1) + "' data-via='PieceDigital' data-text='NEW BLOG | " + blogs[post].title + " -' data-related='Piece Digital Blog' data-count='vertical'> </a> <div class='fb-share-button' data-href='https://piecedigital.github.io/blogpost?blog=" + (post+1) + "' data-layout='box_count'></div>"+
+            "<div class='separator2 dim-blue-bg'></div>"+
+          "<script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,'script','twitter-wjs'));</script><div id='fb-root'></div><script>(function(d, s, id){var js, fjs=d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.src='//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0'; fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>"+
             "<div id='disqus_thread'></div>"+
             "<script type='text/javascript'>"+
           "var disqus_shortname = 'pieceblog';"+
           "var disqus_url = 'http://piecedigital.github.io/blogpost/blogpost.html?blog=" + post + "';"+
-
           "(function() {"+
             "var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;"+
             "dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';"+

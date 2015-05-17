@@ -1,6 +1,4 @@
-$(document).ready(function(){
-  var page = $("#page").attr("class").split(" ").pop();
-  //console.log("items to load: " + page);    
+$(document).ready(function(){ 
 
   function itemizer() {
     //console.log("itemizer initiated");
@@ -36,9 +34,15 @@ $(document).ready(function(){
     function() {
       closeLightbox();
   });
-  $(document).on("click", "#img-box img, #description",
+  $(document).on("click", "#img-box img",
    function() {
-      $("#description").toggleClass("desc-open");
+     $("#description").addClass("desc-open");
+     console.log("description opened");
+  });
+  $(document).on("click", "#description",
+   function() {
+     $("#description").removeClass("desc-open");
+     console.log("description opened");
   });
   function prev() {
     position--;
@@ -61,7 +65,7 @@ $(document).ready(function(){
   $(document).keydown(function(key) {
     switch(key.keyCode){
       case 27:
-        preCloser();
+        closeLightbox();
         console.log("escape key pressed");
       break;
       case 37:
@@ -71,10 +75,6 @@ $(document).ready(function(){
       case 39:
         next();
         console.log("right key pressed");
-      break;
-      case 73:
-        $("#description").toggleClass("desc-open");
-        console.log("description opened");
       break;
     };
   });
