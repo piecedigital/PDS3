@@ -767,6 +767,10 @@ footer {
 }
 
 /* hover events -----------------------*/
+.button:hover {
+	background: $veryLightBlue;
+	color: $dimBlue;
+}
 .parent:hover #sub-nav {
 	height: 12em;
 }

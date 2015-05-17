@@ -727,6 +727,10 @@ footer {
     opacity: .7; }
 
 /* hover events -----------------------*/
+.button:hover {
+  background: #e8f8ff;
+  color: #017ab1; }
+
 .parent:hover #sub-nav {
   height: 12em; }
 
