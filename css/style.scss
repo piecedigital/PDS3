@@ -370,6 +370,7 @@ nav {
 	bottom: 0;
 	right: 2em;
 	@include box-shadow(2em 0 0 0 $veryLightBlue);
+	font-size: 15px;
 	span {
 		display: inline-block;
 	}
@@ -772,7 +773,7 @@ footer {
 	color: $dimBlue;
 }
 .parent:hover #sub-nav {
-	height: 12em;
+	height: 192px;
 }
 .hover-fill:hover{
 	@include box-shadow(inset 0 -6em 0 0 $veryLightBlue !important);

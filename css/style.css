@@ -329,7 +329,8 @@ nav {
   -ms-box-shadow: 2em 0 0 0 #e8f8ff;
   -moz-box-shadow: 2em 0 0 0 #e8f8ff;
   -webkit-box-shadow: 2em 0 0 0 #e8f8ff;
-  box-shadow: 2em 0 0 0 #e8f8ff; }
+  box-shadow: 2em 0 0 0 #e8f8ff;
+  font-size: 15px; }
   nav span {
     display: inline-block; }
 
@@ -732,7 +733,7 @@ footer {
   color: #017ab1; }
 
 .parent:hover #sub-nav {
-  height: 12em; }
+  height: 192px; }
 
 .hover-fill:hover {
   -ms-box-shadow: inset 0 -6em 0 0 #e8f8ff !important;
