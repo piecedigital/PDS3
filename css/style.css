@@ -348,16 +348,14 @@ nav {
   height: 0;
   width: 100%;
   overflow-y: hidden;
-  background: #00a2eb; }
+  background: #00a2eb;
+  box-shadow: 1px 0 0 0 #e8f8ff, -1px 0 0 0 #e8f8ff, 0 1px 0 0 #e8f8ff; }
   #sub-nav li {
     font-size: .8em;
     text-align: center; }
     #sub-nav li span {
-      box-shadow: 1px 0 0 0 #e8f8ff, -1px 0 0 0 #e8f8ff;
       padding: .5em .5em;
       color: #e8f8ff; }
-      #sub-nav li span:last-child {
-        box-shadow: 1px 0 0 0 #e8f8ff, -1px 0 0 0 #e8f8ff, 0 1px 0 0 #e8f8ff; }
 
 .hover-fill {
   -ms-box-shadow: inset 0 0em 0 0 #e8f8ff;
