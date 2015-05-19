@@ -309,7 +309,8 @@ header {
   height: 4em;
   background: linear-gradient(90deg, #00a2eb, #017ab1);
   background: -moz-linear-gradient(90deg, #00a2eb, #017ab1);
-  background: -webkit-linear-gradient(90deg, #00a2eb, #017ab1); }
+  background: -webkit-linear-gradient(90deg, #00a2eb, #017ab1);
+  box-shadow: 0 0 0.2em 0 #017ab1; }
 
 #logo {
   position: absolute;
