@@ -347,13 +347,13 @@ nav {
   left: 0;
   height: 0;
   width: 100%;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  background: #00a2eb; }
   #sub-nav li {
     font-size: .8em;
     text-align: center; }
     #sub-nav li span {
       box-shadow: 1px 0 0 0 #e8f8ff, -1px 0 0 0 #e8f8ff;
-      background: #00a2eb;
       padding: .5em .5em;
       color: #e8f8ff; }
       #sub-nav li span:last-child {
