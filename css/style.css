@@ -352,7 +352,7 @@ nav {
   top: 2em;
   left: 0;
   height: 0;
-  width: 7.2em;
+  width: 100%;
   overflow-y: hidden;
   background: #00a2eb; }
   #sub-nav li {
