@@ -307,12 +307,8 @@ header {
   left: 0;
   width: 100%;
   height: 4em;
-  background: -webkit-linear-gradient(90deg, #00a2eb, #017ab1);
   background: linear-gradient(90deg, #00a2eb, #017ab1);
-  -ms-box-shadow: inset 0 2em 0 0 #017ab1;
-  -moz-box-shadow: inset 0 2em 0 0 #017ab1;
-  -webkit-box-shadow: inset 0 2em 0 0 #017ab1;
-  box-shadow: inset 0 2em 0 0 #017ab1; }
+  background: -webkit-linear-gradient(90deg, #00a2eb, #017ab1); }
 
 #logo {
   position: absolute;
