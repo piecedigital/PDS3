@@ -355,7 +355,8 @@ nav {
     text-align: center; }
     #sub-nav li span {
       padding: .5em .5em;
-      color: #e8f8ff; }
+      color: #e8f8ff;
+      width: 100%; }
 
 .hover-fill {
   -ms-box-shadow: inset 0 0em 0 0 #e8f8ff, 0 0em 0 0 #e8f8ff;
