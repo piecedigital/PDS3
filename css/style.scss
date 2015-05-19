@@ -92,6 +92,7 @@ $picOfMe: url("../images/picofme-bg-grey.png");
 }
 @mixin linear-gradient($deg, $colors...) {
 	background: linear-gradient($deg, $colors);
+	background: -moz-linear-gradient($deg, $colors);
 	background: -webkit-linear-gradient($deg, $colors);
 }
 ///////////////////// Main Styling /////////////////////////////////
