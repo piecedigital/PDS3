@@ -53,6 +53,7 @@ $(document).ready(function() {
   $("#tabs li").on("click", function() {
     $("#tabs li").removeClass("selected");
     $(this).addClass("selected");
+    refresh();
   });
   $("#all-tab").on("click", function() {
     $("#user-list li").attr("style", "");
@@ -138,7 +139,7 @@ $(document).ready(function() {
                                           "<span class='game'>" + game2 + "</span>"+
                                           "<span class='status " + status2[0] + "'>" + status2[1] + "</span>"+
                                         "</a>"+
-                                   			"<div id='add'></div>"+
+                                        "<div id='add'></div>"+
                                       "</li>");
             },
             error: function(secMsg1, secMsg2, secMsg3) {
@@ -159,7 +160,27 @@ $(document).ready(function() {
   // addNewUser function
   function addNewUser () {
     var newUser = $("#user-list2 #add").parent();
-		console.log( newUser );
+    //console.log( newUser );
     $("#user-list").append(newUser);
+    streamer.push($(newUser).data("name"));
+  }
+  function refresh() {
+    streamer.map(function(elem) {
+      //console.log(elem)
+      $.ajax({
+        url:  "https://api.twitch.tv/kraken/streams/" + elem,
+        dataType: "jsonp",
+        success: function(data) {
+          var status;
+          if(data.stream) {
+            status = ["online", "&#x2713;"];
+          } else {
+            status = ["offline", "&#x2716;"];
+          }
+          $("#user-list li[data-name='" + elem + "']").attr("class", status[0]);
+          $("#user-list li[data-name='" + elem + "']").find(".status").attr("class", "status " + status[0]).html(status[1]);
+        }
+      });
+    });
   }
 });
