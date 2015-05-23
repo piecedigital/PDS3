@@ -45,13 +45,13 @@ $(document).ready(function(){
      console.log("description opened");
   });
   function prev() {
-    position--;
-    if(position < 0) { position = itemObj.items.length-1;}
+    position++;
+    if(position > itemObj.items.length-1) { position = 0;}
     openLightbox();
   }
   function next() {
-    position++;
-    if(position > itemObj.items.length-1) { position = 0;}
+    position--;
+    if(position < 0) { position = itemObj.items.length-1;}
     openLightbox();
   }
   $(document).on("click", "#port-prev-btn",
