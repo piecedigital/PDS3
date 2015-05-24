@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Twitch Streamer List</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" />
+	</head>
+	<body>
+		<a class="cite" href="http://piecedigital.github.io/">Piece Digital</a>
+		<section>
+		  <div class="page-wrap justify-center">
+		    <div id="city" class="data-box">
+		        <span class="title">City</span><br>
+		        <span class="data"></span>
+		    </div><!--
+		    --><div id="cnty" class="data-box">
+		      <span class="title">Country</span><br>
+		      <span class="data"></span>
+		    </div><!--
+		    --><div id="cast" class="data-box">
+		      <span class="title">Forecast</span><br>
+		      <span class="data"></span>
+		    </div><!--
+		    --><div id="temp" class="data-box">
+		      <span class="title">Temperature</span><br>
+		      <span class="data"></span>
+		    </div><!--
+		    --><div id="wind" class="data-box">
+		      <span class="title">Wind Speed</span><br>
+		      <span class="data"></span>
+		    </div><!--
+		    --><div id="humi" class="data-box">
+		      <span class="title">Humidity</span><br>
+		      <span class="data"></span>
+		    </div>
+		  </div>
+		</section>
+		<section class="section-colored">
+		  <div class="page-wrap justify-center">
+		    <span class="header bold">Search by Coords (long/lat)</span>
+		    <form action="#" method="post">
+		      <input type="text" name="lat" />
+		      <input type="text" name="lon" />
+		      <input type="hidden" name="info-type" value="coords"/>
+		      <button>SUBMIT</button>
+		    </form>
+		  </div>
+		  <br>
+		  <div class="page-wrap justify-center">
+		    <span class="header bold">Search by City</span>
+		    <form action="#" method="post">
+		      <input type="text" name="name" />
+		      <input type="hidden" name="info-type" value="name"/>
+		      <button>SUBMIT</button>
+		    </form>
+		  </div>
+		  <br>
+		  <div class="page-wrap justify-center">
+		    <span class="header bold">Search by Zipcode</span>
+		    <form action="#" method="post">
+		      <input type="text" name="zip" />
+		      <input type="hidden" name="info-type" value="zip"/>
+		      <button>SUBMIT</button>
+		    </form>
+		  </div>
+		</section>
+		<script type="text/javascript" src="../../js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
