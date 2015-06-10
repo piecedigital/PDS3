@@ -10,6 +10,11 @@
 	<body>
 		<a class="cite" href="http://piecedigital.github.io/">Piece Digital</a>
 		<div class="col-2 full-height justify-center">
+			<form action="http://google.com/search" method="post" id="search">
+				<label for="query" class="search-text">Search Google</label><br>
+				<input type="text" name="q" id="query"><button>&#x2713;</button>
+			</form>
+
 			<div id="favs" ng-controller="ListController as listC">
 				<div class="col-3 justify-center" ng-repeat="item in listC.items"><a href={{item.url}} class="fav-box" target="_blank"><span>{{item.text}}</span></a></div>
 			</div>

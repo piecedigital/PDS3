@@ -96,6 +96,33 @@ body {
 .justify-center {
 	text-align: center;
 }
+.search-text {
+  color: $veryLightBlue;
+  font-weight: bold;
+  display: block;
+}
+#search {
+  padding: 1em;
+  text-align: center;
+  & input, & button {
+    border: none;
+    padding: .3em;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+  & input {
+    border-radius: 1em 0 0 1em;
+    background: white;
+  }
+  & button {
+    border-radius: 0 1em 1em 0;
+    background: $veryLightBlue;
+    border-left: 1px solid $darkBlue;
+    font-size: 14px;
+    padding: .3em 1em;
+  }
+}
 #favs {
 	vertical-align: middle;
 	position: relative;

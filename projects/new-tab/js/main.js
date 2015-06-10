@@ -214,4 +214,11 @@ $(document).ready(function() {
     $("#embed-area #video").html("");
     $("#embed-area #chat").html("");
   }
+  // search box
+  $("#search").on("submit", function() {
+    var searchQuery = $(this).serializeArray()[0];
+    console.log(searchQuery);
+    window.open("https://google.com/search?q=" + searchQuery.value);
+    return false;
+  });
 });
