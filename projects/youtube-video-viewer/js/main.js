@@ -48,7 +48,7 @@ app.controller("loadData", function($scope, $http) {
 $(document).on("click", "a", function() {
   $("body").prepend(  "<div class='backdrop'></div>"+
                       "<div class='embed'>"+
-                      "<iframe width=100% height=100% src='" + $(this).attr('href') + "' frameborder='0' allowfullscreen></iframe>"+
+                      "<iframe width=100% height=100% src='https://youtube.com/embed/" + $(this).data('id') + "' frameborder='0' allowfullscreen></iframe>"+
                     "</div>"+
                     "<div class='close'>&#x2716;</div>");
   return false;
