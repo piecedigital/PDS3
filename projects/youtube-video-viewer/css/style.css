@@ -91,6 +91,10 @@ form button {
   padding: .5em;
   border-radius: 1em .5em .5em 1em;
   cursor: pointer;
+  text-decoration: none;
+  color: #004B6E;
+  text-decoration: none;
+  color: #004B6E;
 }
 
 #next {
@@ -99,6 +103,10 @@ form button {
   padding: .5em;
   border-radius: .5em 1em 1em .5em;
   cursor: pointer;
+  text-decoration: none;
+  color: #004B6E;
+  text-decoration: none;
+  color: #004B6E;
 }
 
 .thumbnail {
