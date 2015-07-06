@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var streamer = ["piecedigital", "freecodecamp", "riotgames", "asiaamore", "gbay99", "c9sneaky", "prestigestudios", "brokengamezhd", "cillaid", "trick2g", "snowlit", "ugclive", "thehaleybaby"];
+  var streamer = ["piecedigital", "freecodecamp", "riotgames", "asiaamore", "gbay99", "c9sneaky", "prestigestudios", "brokengamezhd", "cillaid", "trick2g", "snowlit", "ugclive", "thehaleybaby", "jennythesquirrel", "namnamsian"];
   streamer.map(function(elem) {
     // console.log(elem);
     $.ajax({
