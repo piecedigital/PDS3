@@ -12,5 +12,6 @@ angular.module("listApp", [])
 		{text: "Linkedin", url: "http://linkedin.com/"},
 		{text: "Free Code Camp", url: "http://freecodecamp.com/"},
 		{text: "GMail - PDS", url: "https://mail.google.com/mail/u/0/"},
-		{text: "GMail - Trash", url: "https://mail.google.com/mail/u/1/"}];
+		{text: "GMail - Trash", url: "https://mail.google.com/mail/u/1/"},
+		{text: "Spotify", url: "https://spotify.com"}];
 	});
