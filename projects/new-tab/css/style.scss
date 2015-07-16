@@ -358,16 +358,17 @@ body {
 }
 #embed {
 	position: fixed;
-	top: 0;
+  right: 0;
 	width: 100%;
 	max-width: 800px;
 	height: 97%;
 	background: $dimBlue;
 	&:not(.open-embed) {
-		right: -100%;
+    top: 100%;
 		@include transformT(-0em, 0);
 	}
 	& #close {
+    height: 2em;
 		display: inline-block;
 		background: $darkBlue;
 		padding: .3em;
@@ -381,12 +382,14 @@ body {
 		}
 	}
 	& #hide {
+    height: 2em;
 		display: inline-block;
 		background: $darkBlue;
 		padding: .3em;
 		cursor: pointer;
+    vertical-align: top;
 		&:after {
-			content: "\2794";
+			content: "\2935";
 			color: $veryLightBlue;
 		}
 		&:hover {
@@ -395,12 +398,11 @@ body {
 	}
 }
 .open-embed {
-	right: 0%;
+  top: 0%;
 }
 .embed-partial {
-	@include transformT(-3em, 0);
-	right: -100%;
-	left: 100%
+	@include transformT(0, -2em);
+  top: 100%;
 }
 
 @include media-max(800px) {

@@ -213,6 +213,7 @@ $(document).ready(function() {
     $("#embed").removeClass("open-embed embed-partial");
     $("#embed-area #video").html("");
     $("#embed-area #chat").html("");
+    $("#backdrop").removeClass("backdrop");
   }
   // search box
   $("#search").on("submit", function() {
