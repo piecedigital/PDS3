@@ -1,53 +1,60 @@
 $(document).ready(function() {
+  var originalTitle = "Custom New Tab";
+
   var streamer = ["piecedigital", "freecodecamp", "riotgames", "asiaamore", "gbay99", "c9sneaky", "prestigestudios", "brokengamezhd", "cillaid", "trick2g", "snowlit", "ugclive", "thehaleybaby", "jennythesquirrel", "namnamsian"];
-  streamer.map(function(elem) {
-    // console.log(elem);
-    $.ajax({
-      url: "https://api.twitch.tv/kraken/streams/" + elem,
-      dataType: "jsonp",
-      success: function(data) {
-        //console.log("stream channel: " + data._links.channel);
-        var status;
-        if(data.stream) {
-          status = ["online", "&#x2713;"];
-        } else {
-          status = ["offline", "&#x2716;"];
-        }
-        $.ajax({
-          url: data._links.channel,
-          dataType: "jsonp",
-          success: function(secondData) {
-            //console.log("stream data: " + secondData.url);
-            var url = secondData.url;
-            var name = secondData.name;
-            var displayName = secondData.display_name;
-            var logo = secondData.logo || "http://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png";
-            var title = secondData.status;
-            var game = secondData.game;
-            $("#user-list").append("<li class='" + status[0] + "' data-name='" + name + "'>"+
-                                      "<a href='" + url + "' target='_blank'>"+
-                                        "<img class='image' src='" + logo + "' alt='' />"+
-                                        "<span class='name'>" + displayName + "</span>"+
-                                        "<span class='title'>" + title + "</span>"+
-                                        "<span class='game'>" + game + "</span>"+
-                                        "<span class='status " + status[0] + "'>" + status[1] + "</span>"+
-                                      "</a>"+
-                                    "</li>");
-          },
-          error: function(secMsg1, secMsg2, secMsg3) {
-            console.log(secMsg1.status);
-            console.log(secMsg2);
-            console.log(secMsg3.message);
+  function listSteamers() {
+    $("#user-list").html("");
+    streamer.map(function(elem) {
+      // console.log(elem);
+      $.ajax({
+        url: "https://api.twitch.tv/kraken/streams/" + elem,
+        dataType: "jsonp",
+        success: function(data) {
+          //console.log("stream channel: " + data._links.channel);
+          var status;
+          if(data.stream) {
+            status = ["online", "&#x2713;"];
+          } else {
+            status = ["offline", "&#x2716;"];
           }
-        });
-      },
-      error: function(msg1, msg2, msg3) {
-        console.log(msg1.status);
-        console.log(msg2);
-        console.log(msg3.message);
-      }
+          $.ajax({
+            url: data._links.channel,
+            dataType: "jsonp",
+            success: function(secondData) {
+              //console.log("stream data: " + secondData.url);
+              console.log(secondData);
+              var url = secondData.url;
+              var name = secondData.name;
+              var displayName = secondData.display_name;
+              var logo = secondData.logo || "http://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_150x150.png";
+              var title = secondData.status;
+              var game = secondData.game;
+              $("#user-list").append("<li class='" + status[0] + "' data-name='" + name + "'>"+
+                                        "<a href='" + url + "' target='_blank'>"+
+                                          "<img class='image' src='" + logo + "' alt='' />"+
+                                          "<span class='name'>" + displayName + "</span>"+
+                                          "<span class='title'>" + title + "</span>"+
+                                          "<span class='game'>" + game + "</span>"+
+                                          "<span class='status " + status[0] + "'>" + status[1] + "</span>"+
+                                        "</a>"+
+                                      "</li>");
+            },
+            error: function(secMsg1, secMsg2, secMsg3) {
+              console.log(secMsg1.status);
+              console.log(secMsg2);
+              console.log(secMsg3.message);
+            }
+          });
+        },
+        error: function(msg1, msg2, msg3) {
+          console.log(msg1.status);
+          console.log(msg2);
+          console.log(msg3.message);
+        }
+      });
     });
-  });
+  };
+  listSteamers();
   // click events
   // tab functionality
   $("#tabs li").on("click", function() {
@@ -73,14 +80,25 @@ $(document).ready(function() {
   // stream clicks
   $(document).on("click", "#user-list li", function() {
     var thisUrl = $(this).find("a").attr("href");
-    showEmbed(thisUrl);
+    var thisName = $(this).find(".name").html();
+    showEmbed(thisUrl, thisName);
     return false;
+  });
+  //reload click
+  $("#reload").on("click", function() {
+    listSteamers();
   });
   $(document).on("click", "#embed #hide", function() {
     hideEmbed();
   });
   $(document).on("click", "#embed #close", function() {
     closeEmbed();
+  });
+  $(document).on("click", "#embed #theater", function() {
+    theater();
+  });
+  $(document).on("click", "#embed #hide-chat", function() {
+    hideChat();
   });
   // search functionality
   var formData = $("#listed-search");
@@ -196,12 +214,13 @@ $(document).ready(function() {
     });
   }
   // when clicking stream items
-  function showEmbed(url) {
+  function showEmbed(url, name) {
     console.log(url);
     $("#backdrop").addClass("backdrop");
     $("#embed").addClass("open-embed");
     $("#embed-area #video").html("<iframe src='" + url + "/embed' frameborder='0' scrolling='no' height=100% width=100%></iframe><a href='" + url + "?tt_medium=live_embed&tt_content=text_link' style='padding:2px 0px 4px; display:block; width:100%; font-weight:normal; font-size:10px;text-decoration:underline;'>Watch live video from Riot Games on www.twitch.tv</a>");
     $("#embed-area #chat").html("<iframe src='" + url + "/chat?popout='' frameborder='0' scrolling='no' height=100% width=100%></iframe>");
+    $("title").text("Now: " + name);
   }
   function hideEmbed() {
     console.log();
@@ -214,6 +233,17 @@ $(document).ready(function() {
     $("#embed-area #video").html("");
     $("#embed-area #chat").html("");
     $("#backdrop").removeClass("backdrop");
+    $("body").removeClass("theater, hide-chat");
+    $("title").text(originalTitle);
+  }
+  function theater() {
+    $("body").toggleClass("theater");
+    $("body").removeClass("hide-chat");
+  }
+  function hideChat() {
+    if($("body").hasClass("theater")) {
+      $("body").toggleClass("hide-chat");
+    }
   }
   // search box
   $("#search").on("submit", function() {

@@ -197,7 +197,16 @@ body {
     }
   }
 }
+#reload {
+  display: inline-block;
+  padding: .4em.7em;
+  border-radius: 2em;
+  background-color: $darkBlue;
+  color: $veryLightBlue;
+  cursor: pointer;
+}
 #listed-search {
+  display: inline-block;
   padding: 1em;
   text-align: center;
   & input, & button {
@@ -365,7 +374,7 @@ body {
 	background: $dimBlue;
 	&:not(.open-embed) {
     top: 100%;
-		@include transformT(-0em, 0);
+		@include transformT(0, -0em);
 	}
 	& #close {
     height: 2em;
@@ -396,6 +405,36 @@ body {
 			background: $dimBlue;
 		}
 	}
+  & #theater {
+    height: 2em;
+    display: inline-block;
+    background: $darkBlue;
+    padding: .3em;
+    cursor: pointer;
+    vertical-align: top;
+    &:after {
+      content: "\2948";
+      color: $veryLightBlue;
+    }
+    &:hover {
+      background: $dimBlue;
+    }
+  }
+  & #hide-chat {
+    height: 2em;
+    display: inline-block;
+    background: $darkBlue;
+    padding: .3em;
+    cursor: pointer;
+    vertical-align: top;
+    &:after {
+      content: "\2986";
+      color: $veryLightBlue;
+    }
+    &:hover {
+      background: $dimBlue;
+    }
+  }
 }
 .open-embed {
   top: 0%;
@@ -410,4 +449,50 @@ body {
 		display: block;
 		width: 100%;
 	}
+}
+.theater {
+  & #embed {
+    max-width: 100%;
+    height: 97%;
+    & #video {
+      vertical-align: top;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      padding: 0 18em 0 0;
+    }
+    & #chat {
+      vertical-align: top;
+      width: 18em;
+      height: 100%;
+      position: fixed;
+      top: 2em;
+      right: 0;
+      display: inline-block;
+    }
+  }
+}
+.hide-chat {
+  & #embed {
+    & #video {
+      width: 100%;
+      padding: 0;
+    }
+    & #chat {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .theater {
+    & #embed {
+      & #video {
+        width: 100%;
+        padding: 0;
+      }
+      & #chat {
+        display: none;
+      }
+    }
+  }
 }
