@@ -6,95 +6,95 @@ $darkBlue: #013D58;
 
 // necessary mixins
 @mixin border-radius($val...) {
-	-ms-border-radius: $val;
-	-moz-border-radius: $val;
-	-webkit-border-radius: $val;
-	border-radius: $val;
+  -ms-border-radius: $val;
+  -moz-border-radius: $val;
+  -webkit-border-radius: $val;
+  border-radius: $val;
 }
 @mixin box-shadow($val...) {
-	-ms-box-shadow: $val;
-	-moz-box-shadow: $val;
-	-webkit-box-shadow: $val;
-	box-shadow: $val;
+  -ms-box-shadow: $val;
+  -moz-box-shadow: $val;
+  -webkit-box-shadow: $val;
+  box-shadow: $val;
 }
 @mixin transformR($val...) {
-	-ms-transform: rotate($val);
-	-moz-transform: rotate($val);
-	-webkit-transform: rotate($val);
-	transform: rotate($val);
+  -ms-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -webkit-transform: rotate($val);
+  transform: rotate($val);
 }
 @mixin transformS($val) {
-	-ms-transform: scale($val);
-	-moz-transform: scale($val);
-	-webkit-transform: scale($val);
-	transform: scale($val);
+  -ms-transform: scale($val);
+  -moz-transform: scale($val);
+  -webkit-transform: scale($val);
+  transform: scale($val);
 }
 @mixin transformRS($rot, $scale...) {
-	-ms-transform: rotate( $rot ) scale( $scale );
-	-moz-transform: rotate( $rot ) scale( $scale );
-	-webkit-transform: rotate( $rot ) scale( $scale );
-	transform: rotate( $rot ) scale( $scale );
+  -ms-transform: rotate( $rot ) scale( $scale );
+  -moz-transform: rotate( $rot ) scale( $scale );
+  -webkit-transform: rotate( $rot ) scale( $scale );
+  transform: rotate( $rot ) scale( $scale );
 }
 @mixin transformT($val...) {
-	-ms-transform: translate($val);
-	-moz-transform: translate($val);
-	-webkit-transform: translate($val);
-	transform: translate($val);
+  -ms-transform: translate($val);
+  -moz-transform: translate($val);
+  -webkit-transform: translate($val);
+  transform: translate($val);
 }
 @mixin transformST($val1, $val2...) {
-	-ms-transform: scale($val1) translate($val2);
-	-moz-transform: scale($val1) translate($val2);
-	-webkit-transform: scale($val1) translate($val2);
-	transform: scale($val1) translate($val2);
+  -ms-transform: scale($val1) translate($val2);
+  -moz-transform: scale($val1) translate($val2);
+  -webkit-transform: scale($val1) translate($val2);
+  transform: scale($val1) translate($val2);
 }
 @mixin media-min($val) {
-	@media screen and (min-width: $val) {
-		@content;
-	}
+  @media screen and (min-width: $val) {
+    @content;
+  }
 }
 @mixin media-max($val) {
-	@media screen and (max-width: $val) {
-		@content;
-	}
+  @media screen and (max-width: $val) {
+    @content;
+  }
 }
 
 ///////////////////// Main Styling /////////////////////////////////
 /*///////////////////////// prerequisites /////////////////////////*/
 /* css resets */
 *, *:before, *:after {
-	font-family: sans-serif;
-	transition: all .2s ease-in-out;
-	box-sizing: border-box;
-	font-size: 16px;
+  font-family: sans-serif;
+  transition: all .2s ease-in-out;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 a {
-	text-decoration: none;
-	color: $darkBlue;
-	font-weight: bold;
+  text-decoration: none;
+  color: $darkBlue;
+  font-weight: bold;
 }
 
 body {
-	margin: 0;
-	background: $midBlue;
-	height: 99vh;
+  margin: 0;
+  background: $midBlue;
+  height: 99vh;
 }
 .col-2 {
-	display: inline-block;
-	width: 50%;
-	vertical-align: top;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
 }
 .col-3 {
-	display: inline-block;
-	width: 33.333333333333%;
+  display: inline-block;
+  width: 33.333333333333%;
 }
 .full-height {
-	height: 100%;
+  height: 100%;
 }
 .half-height {
-	height: 50%;
+  height: 50%;
 }
 .justify-center {
-	text-align: center;
+  text-align: center;
 }
 .search-text {
   color: $veryLightBlue;
@@ -124,30 +124,30 @@ body {
   }
 }
 #favs {
-	vertical-align: middle;
-	position: relative;
-	top: 50%;
-	max-width: 20em;
-	margin: 0 auto;
-	@include transformT(0, -50%);
+  vertical-align: middle;
+  position: relative;
+  top: 50%;
+  max-width: 20em;
+  margin: 0 auto;
+  @include transformT(0, -50%);
 }
 .fav-box {
-	display: inline-block;
-	background: $dimBlue;
-	border-radius: .5em;
-	margin: .3em;
-	width: 6em;
-	height: 6em;
-	padding: .5em;
-	vertical-align: top;
-	color: $veryLightBlue;
-	& span {
-		display: block;
-		position: relative;
-		top: 50%;
-		@include transformT(0, -50%);
-	}
-	&:hover {
+  display: inline-block;
+  background: $dimBlue;
+  border-radius: .5em;
+  margin: .3em;
+  width: 6em;
+  height: 6em;
+  padding: .5em;
+  vertical-align: top;
+  color: $veryLightBlue;
+  & span {
+    display: block;
+    position: relative;
+    top: 50%;
+    @include transformT(0, -50%);
+  }
+  &:hover {
     background: $darkBlue;
   }
 }
@@ -350,61 +350,61 @@ body {
   }
 }
 #backdrop {
-	z-index: -1;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, .7);
-	&:not(.backdrop) {
-		pointer-events: none;
-		background: transparent;
-	}
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  &:not(.backdrop) {
+    pointer-events: none;
+    background: transparent;
+  }
 }
 .backdrop {
-	pointer-events: auto;
+  pointer-events: auto;
 }
 #embed {
-	position: fixed;
+  position: fixed;
   right: 0;
-	width: 100%;
-	max-width: 800px;
-	height: 97%;
-	background: $dimBlue;
-	&:not(.open-embed) {
+  width: 100%;
+  max-width: 800px;
+  height: 97%;
+  background: $dimBlue;
+  &:not(.open-embed) {
     top: 100%;
-		@include transformT(0, -0em);
-	}
-	& #close {
+    @include transformT(0, -0em);
+  }
+  & #close {
     height: 2em;
-		display: inline-block;
-		background: $darkBlue;
-		padding: .3em;
-		cursor: pointer;
-		&:after {
-			content: "\2716";
-			color: $veryLightBlue;
-		}
-		&:hover {
-			background: $dimBlue;
-		}
-	}
-	& #hide {
+    display: inline-block;
+    background: $darkBlue;
+    padding: .3em;
+    cursor: pointer;
+    &:after {
+      content: "\2716";
+      color: $veryLightBlue;
+    }
+    &:hover {
+      background: $dimBlue;
+    }
+  }
+  & #hide {
     height: 2em;
-		display: inline-block;
-		background: $darkBlue;
-		padding: .3em;
-		cursor: pointer;
+    display: inline-block;
+    background: $darkBlue;
+    padding: .3em;
+    cursor: pointer;
     vertical-align: top;
-		&:after {
-			content: "\2935";
-			color: $veryLightBlue;
-		}
-		&:hover {
-			background: $dimBlue;
-		}
-	}
+    &:after {
+      content: "\2935";
+      color: $veryLightBlue;
+    }
+    &:hover {
+      background: $dimBlue;
+    }
+  }
   & #theater {
     height: 2em;
     display: inline-block;
@@ -440,15 +440,15 @@ body {
   top: 0%;
 }
 .embed-partial {
-	@include transformT(0, -2em);
+  @include transformT(0, -2em);
   top: 100%;
 }
 
 @include media-max(800px) {
-	.col-2 {
-		display: block;
-		width: 100%;
-	}
+  .col-2 {
+    display: block;
+    width: 100%;
+  }
 }
 .theater {
   & #embed {
@@ -457,7 +457,7 @@ body {
     & #video {
       vertical-align: top;
       width: 100%;
-      height: 100%;
+      height: 98%;
       display: inline-block;
       padding: 0 18em 0 0;
     }

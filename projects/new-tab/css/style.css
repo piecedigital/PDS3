@@ -364,7 +364,7 @@ body {
   .theater #embed #video {
     vertical-align: top;
     width: 100%;
-    height: 100%;
+    height: 98%;
     display: inline-block;
     padding: 0 18em 0 0; }
   .theater #embed #chat {
