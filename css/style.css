@@ -57,7 +57,7 @@
 
 a {
   text-decoration: none;
-  color: #1b002e;
+  color: #004B6E;
   font-weight: bold; }
 
 body {
@@ -106,8 +106,8 @@ header, section, footer {
   margin: 0em auto;
   width: -3em;
   height: 3em;
-  border: 0.5em solid #1b002e;
-  border-color: #1b002e transparent #1b002e transparent;
+  border: 0.5em solid #004B6E;
+  border-color: #004B6E transparent #004B6E transparent;
   -ms-border-radius: 100%;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
@@ -189,17 +189,11 @@ section {
 .very-light-blue-bg {
   background: #e8f8ff; }
 
-.purple {
-  color: #4a007e; }
+.dark-Blue {
+  color: #004B6E; }
 
-.purple-bg {
-  background: #4a007e; }
-
-.dark-purple {
-  color: #1b002e; }
-
-.dark-purple-bg {
-  background: #1b002e; }
+.dark-Blue-bg {
+  background: #004B6E; }
 
 .underline {
   text-decoration: underline; }

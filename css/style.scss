@@ -6,8 +6,7 @@ $midBlue: #00a2eb;
 $dimBlue: #017ab1;
 $lightBlue: #9be0ff;
 $veryLightBlue: #e8f8ff;
-$purple: #4a007e;
-$darkPurple: #1b002e;
+$darkBlue: #004B6E;
 
 // picture
 $picOfMe: url("../images/picofme-bg-grey.png");
@@ -105,7 +104,7 @@ $picOfMe: url("../images/picofme-bg-grey.png");
 }
 a {
 	text-decoration: none;
-	color: $darkPurple;
+	color: $darkBlue;
 	font-weight: bold;
 }
 
@@ -158,8 +157,8 @@ header, section, footer {
 	margin: 0em auto;
 	width: -3em;
 	height: 3em;
-	border: .5em solid $darkPurple;
-	border-color: $darkPurple transparent $darkPurple transparent;
+	border: .5em solid $darkBlue;
+	border-color: $darkBlue transparent $darkBlue transparent;
 	@include border-radius(100%);
 }
 .separator {
@@ -238,17 +237,11 @@ section {
 .very-light-blue-bg {
 	background: $veryLightBlue;
 }
-.purple {
-	color: $purple;
+.dark-Blue {
+	color: $darkBlue;
 }
-.purple-bg {
-	background: $purple;
-}
-.dark-purple {
-	color: $darkPurple;
-}
-.dark-purple-bg {
-	background: $darkPurple;
+.dark-Blue-bg {
+	background: $darkBlue;
 }
 .underline {
 	text-decoration: underline;
