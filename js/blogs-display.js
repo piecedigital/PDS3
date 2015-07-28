@@ -26,9 +26,9 @@ $(document).ready(function(){
         for(i = pageMax; i > PMsub -1; i--){
           $(".blogs-container").append(
               "<div class='blog-item'>"+
-                "<div class='blog-title dark-purple'><span data-href='blogpost' data-blogquery='?blogpost=" + (i+1) + "' class='inliner inc-md-size-text a-tag'>Blog #" + (i+1) + ": " + blogs[i].title + "</span></div>"+
+                "<div class='blog-title dark-blue'><span data-href='blogpost' data-blogquery='?blogpost=" + (i+1) + "' class='inliner inc-md-size-text a-tag'>Blog #" + (i+1) + ": " + blogs[i].title + "</span></div>"+
                 "<div class='blog-time small-text'>" + blogs[i].time + "</div>"+
-                "<div class='blog-body'>" + blogs[i].body.substring(0, 140) + "... " + "<span data-href='blogpost' data-blogquery='?blogpost=" + i + "' class='a-tag dark-purple'>Read More</span></div>"+
+                "<div class='blog-body'>" + blogs[i].body.substring(0, 140) + "... " + "<span data-href='blogpost' data-blogquery='?blogpost=" + i + "' class='a-tag dark-blue'>Read More</span></div>"+
               "</div>"+
               "<div class='separator2 dim-blue-bg'></div>"
             );

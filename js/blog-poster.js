@@ -14,7 +14,7 @@ $(document).ready(function(){
       function showBlog() {
         $(".blogs-container").html(
             "<div class='blog-item'>"+
-              "<div class='blog-title dark-purple'><span class='inliner inc-md-size-text bolden'>Blog #" + (post+1) + ": " + blogs[post].title + "</span></div>"+
+              "<div class='blog-title dark-blue'><span class='inliner inc-md-size-text bolding'>Blog #" + (post+1) + ": " + blogs[post].title + "</span></div>"+
               "<div class='blog-time small-text'>" + blogs[post].time + "</div>"+
               "<div class='blog-body'>" + blogs[post].body + "</div>"+
             "</div>"+

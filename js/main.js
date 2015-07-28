@@ -42,7 +42,6 @@ $(document).ready(function() {
 		  success: function(data){
 		  	$("#page-insertion").html(data);
 		  	$("#loading-icon").hide();
-		  	$("meta[property='og:url']").attr("content", "http://piecedigital.github.io/" + page);
 		  	$("body").attr("class", $("#page").attr("class") );
 		  	//console.log( $("#page").attr("class") );
 		  	$("meta[property='og:url']").attr("content", window.location.href);
