@@ -140,6 +140,9 @@ section {
 .pad1-even {
   padding: 2em 0 2em; }
 
+.pad2-even {
+  padding: 1em 0 1em; }
+
 .pad1-bottom {
   padding: 0em 0 4em; }
 
@@ -480,6 +483,7 @@ body.pens #pens.hover-fill {
   display: inline-block;
   margin: .5em;
   padding: 1em;
+  min-height: 7em;
   width: 100%;
   background: #00a2eb; }
   .item-box2:before {
