@@ -479,9 +479,8 @@ body.pens #pens.hover-fill {
   position: relative;
   display: inline-block;
   margin: .5em;
+  padding: 1em;
   width: 100%;
-  min-height: 5em;
-  overflow: hidden;
   background: #00a2eb; }
   .item-box2:before {
     z-index: 1;
