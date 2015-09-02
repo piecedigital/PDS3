@@ -39,6 +39,7 @@ $(document).ready(function() {
 		$("#loading-icon").show();
 		$.ajax({
 		  url: "./views/" + page + ".html",
+		  dataType: "text",
 		  success: function(data){
 		  	$("#page-insertion").html(data);
 		  	$("#loading-icon").hide();
@@ -60,7 +61,7 @@ $(document).ready(function() {
 	function pushState(page, blogPost) {
 		if(history[historyIndex] !== page) {
 			blogPost = blogPost || "";
-			window.history.pushState({}, page, "" + page + ".html" + blogPost );
+			window.history.pushState({}, page, "" + page + "" + blogPost );
 			historyIndex++;
 			history[historyIndex] = page;
 			history = history.slice(0, historyIndex+1);
