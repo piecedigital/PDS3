@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="listApp">
+<html >
 	<head>
 		<title>Custom New Tab</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -8,19 +8,9 @@
 		<script type="text/javascript" src="js/angmod.js"></script>
 	</head>
 	<body>
-		<a class="cite" href="http://piecedigital.github.io/">Piece Digital</a>
-		<div class="col-2 full-height justify-center">
-			<form action="http://google.com/search" method="post" id="search">
-				<label for="query" class="search-text">Search Google</label><br>
-				<input type="text" name="q" id="query"><button>&#x2713;</button>
-			</form>
-
-			<div id="favs" ng-controller="ListController as listC">
-				<div class="col-3 justify-center" ng-repeat="item in listC.items"><a href={{item.url}} class="fav-box" target="_blank"><span>{{item.text}}</span></a></div>
-			</div>
-		</div><!--
-		--><div class="col-2 full-height justify-center">
-			<div class="">
+		<a class="cite" href="http://piecedigital.github.io/" target="_blank">Piece Digital</a>
+		<div class="full-height justify-center">
+			<div class="col-2">
 			  <div id="box">
 			    <ul id="tabs">
 			      <li id="all-tab" class="selected">ALL</li><!--
@@ -38,7 +28,7 @@
 			    </ul>
 			  </div>
 			</div><!--
-			--><div class="">
+			--><div class="col-2">
 			  <!-- look up unlisted user -->
 			  <div id="box">
 			    <div id="header">
