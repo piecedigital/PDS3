@@ -23,7 +23,7 @@ $(document).ready(function() {
 		  success: function(data){
 		  	$("#page-data").html();
 		  	$("#page-data").html(data);
-		  	window.history.replaceState({}, page, "main.html?page="+ page )
+		  	window.history.replaceState({}, page, "index.html?page="+ page )
 			}
 		});
 	}
