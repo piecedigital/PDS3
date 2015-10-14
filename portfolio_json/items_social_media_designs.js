@@ -23,27 +23,6 @@ var itemObj = {
     },
     {
       "divAlt": "Social media graphic design",
-      "subtitle": "(old) PHS Twitter Background - Social Media",
-      "imgDesc": "social_media/sm-desc.txt",
-      "imgSrc": "social_media/phs-background.jpg",
-      "imgAlt": "Poor Homie Studios twitter background"
-    },
-    {
-      "divAlt": "Social media graphic design",
-      "subtitle": "PDS Twitter Header - Social Media",
-      "imgDesc": "social_media/sm-desc.txt",
-      "imgSrc": "social_media/pds-header.png",
-      "imgAlt": "Piece Digital Studios twitter header"
-    },
-    {
-      "divAlt": "Social media graphic design",
-      "subtitle": "Only Adam Smith - Social Media",
-      "imgDesc": "social_media/sm-desc.txt",
-      "imgSrc": "social_media/oas.jpg",
-      "imgAlt": "Only Adam Smith twitter AVI"
-    },
-    {
-      "divAlt": "Social media graphic design",
       "subtitle": "Fly Future Twitter AVI 2 - Social Media",
       "imgDesc": "social_media/ff-desc.txt",
       "imgSrc": "social_media/ff-avi-2.png",

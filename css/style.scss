@@ -806,7 +806,7 @@ footer {
 	@include box-shadow(inset 0 -6em 0 0 $veryLightBlue, 0 0em 0 0 $veryLightBlue !important);
 }
 #sub-nav li.hover-fill:last-child:hover span {
-	@include box-shadow(inset 0 -6em 0 0 $veryLightBlue, 0 1em 0 0 $veryLightBlue !important);
+	@include box-shadow(inset 0 -6em 0 0 $veryLightBlue, 0 2em 0 0 $veryLightBlue !important);
 }
 .hover-fill:hover, .hover-fill:hover > .a-tag {
 	color: $midBlue !important;

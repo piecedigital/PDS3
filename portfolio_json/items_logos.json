@@ -1,13 +1,6 @@
 {
   "items": [
     {
-      "divAlt": "Letter mark logo design",
-      "subtitle": "S: 2",
-      "imgDesc": "logos/s2.txt",
-      "imgSrc": "logos/s2.png",
-      "imgAlt": "S2 - logo"
-    },
-    {
       "divAlt": "Mascot logo design",
       "subtitle": "Rebel - Logo",
       "imgDesc": "logos/rebel.txt",
@@ -20,13 +13,6 @@
       "imgDesc": "logos/vhq.txt",
       "imgSrc": "logos/vhq.png",
       "imgAlt": "Vaio HQ - logo"
-    },
-    {
-      "divAlt": "Symbol logo design",
-      "subtitle": "Eye Box - Logo",
-      "imgDesc": "logos/eye-box.txt",
-      "imgSrc": "logos/ebox.png",
-      "imgAlt": "Eye Box - logo"
     },
     {
       "divAlt": "Mascot logo design",
