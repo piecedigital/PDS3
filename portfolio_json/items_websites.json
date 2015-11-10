@@ -104,13 +104,6 @@
       "imgDesc": "webs/mnh2/mnh-webs-desc.txt",
       "imgSrc": "webs/mnh2/mockup - index.png",
       "imgAlt": "Mock-up"
-    },
-    {
-      "divAlt": "freecodechat",
-      "subtitle": "Free Code Chat",
-      "imgDesc": "webs/fcchat/fcchat-desc.txt",
-      "imgSrc": "webs/fcchat/fcchat-screenshot.png",
-      "imgAlt": "free code chat screenshot"
     }
   ]
 }
