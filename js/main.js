@@ -99,6 +99,13 @@ $(document).ready(function() {
     $("#sub-nav").toggleClass("open");
     // console.log("sub-nav opened");
   });
+
+  // anchor clicks with data-href
+  $(document).on("click", "a", function(e) {
+  	if($(this).data("href")) {
+  		e.preventDefault();
+  	}
+  });
   setInterval(function() {
   	var currentPage = window.location.pathname.split("/").pop().replace(/.html/gi, "");
   	// console.log(currentPage);
@@ -112,6 +119,6 @@ $(document).ready(function() {
   			pageLoader(currentPage);
   		}
   	}
-  }, 100);
+  }, 0);
 	//end document ready
 });
