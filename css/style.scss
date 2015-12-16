@@ -373,7 +373,7 @@ nav {
 	right: 2em;
 	@include box-shadow(2em 0 0 0 $veryLightBlue);
 	font-size: 15px;
-	span {
+	span, a {
 		display: inline-block;
 	}
 }
@@ -398,7 +398,7 @@ nav {
 	li {
 		font-size: .8em;
 		text-align: center;
-		span {
+		a {
 			padding: .5em .5em;
 			color: $veryLightBlue;
 			width: 100%;
@@ -805,7 +805,7 @@ footer {
 .hover-fill:hover{
 	@include box-shadow(inset 0 -6em 0 0 $veryLightBlue, 0 0em 0 0 $veryLightBlue !important);
 }
-#sub-nav li.hover-fill:last-child:hover span {
+#sub-nav li.hover-fill:last-child:hover a {
 	@include box-shadow(inset 0 -6em 0 0 $veryLightBlue, 0 2em 0 0 $veryLightBlue !important);
 }
 .hover-fill:hover, .hover-fill:hover > .a-tag {

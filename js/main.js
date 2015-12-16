@@ -19,9 +19,10 @@ $(document).ready(function() {
 	};
 	
 	//nav clicks
-	$(document).on("click", ".a-tag", function() {
+	$(document).on("click", ".a-tag", function(e) {
 		//console.log("clicked a-tag");
 		//console.log( $(this).data("href") );
+		e.preventDefault();
 		if( $(this).data("href") ) {
 			var page = $(this).data("href");
 			var blogQuery = $(this).data("blogquery") || "";
@@ -72,7 +73,7 @@ $(document).ready(function() {
 	function replaceState(page, blogPost) {
 		if(true) {
 			blogPost = blogPost || "";
-			window.history.replaceState({}, page, "" + page + ".html" + blogPost );
+			window.history.replaceState({}, page, "" + page + "" + blogPost );
 			history[historyIndex] = page;
 			//console.log(history);
 		}
@@ -99,13 +100,6 @@ $(document).ready(function() {
     $("#sub-nav").toggleClass("open");
     // console.log("sub-nav opened");
   });
-
-  // anchor clicks with data-href
-  $(document).on("click", "a", function(e) {
-  	if($(this).data("href")) {
-  		e.preventDefault();
-  	}
-  });
   setInterval(function() {
   	var currentPage = window.location.pathname.split("/").pop().replace(/.html/gi, "");
   	// console.log(currentPage);
@@ -119,6 +113,6 @@ $(document).ready(function() {
   			pageLoader(currentPage);
   		}
   	}
-  }, 0);
+  }, 100);
 	//end document ready
 });

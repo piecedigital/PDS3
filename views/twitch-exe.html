@@ -4,7 +4,8 @@
 		<div class="padding-2 med-text center-justify bolding">Description</div>
 		<div>
 			<p class="center-justify inc-sm-size-text">
-				Twitch Exe is a desktop application for watching livestreams for <a href="http://twitch.tv">Twitch.tv</a>. It's built using <a href="http://electron.atom.io">Electron</a>.
+				Twitch Exe is a desktop application for watching livestreams from <a href="http://twitch.tv">Twitch.tv</a>. It's built using <a href="http://electron.atom.io">Electron</a>.<br>
+				It provides and asynchronous viewing experience so you don't have to refresh or stop watching a streamer just to see who's online! It supports multi-stream viewing and it also supports <a href="http://multitwitch.tv/">multitwitch.tv</a> links!
 				<br><br>
 				Linked below is the full project.
 			</p>
@@ -31,6 +32,17 @@
 			<div class="separator dim-blue-bg"></div>
 		</div>
 
+		<div class="parent padding-2 center-justify">
+			<h1 class="unset">
+				<span class="dark-blue big-text bolding">Previews</span>
+			</h1>
+		</div>
+		<div class="page-wrap padding-2">
+			<div class="portfolio-container">
+			
+			</div>
+		</div>
+
 		<div class="col-two">
 			<div class="center-justify pad1-top">
 				<div class="col-two"></div><div class="col-two">
@@ -45,5 +57,27 @@
 				</div><div class="col-two"></div>
 			</div>
 		</div>
+
 	</div>
 </section>
+
+<div id="lightbox">
+	<div id="backdrop"></div>
+	<div id="img-box" class="img-contain"></div>
+	<div id="port-prev-btn">
+		<div>
+			<div></div>
+		</div>
+	</div>
+	<div id="port-next-btn">
+		<div>
+			<div></div>
+		</div>
+	</div>
+	<div id="description" class="inc-sm-size-text"></div>
+	<div id="subtitle"></div>
+	<div id="close" class="a-tag">X</div>
+</div>
+<script type="text/javascript">
+	populatePortfolioPage("twitch_exe_previews");
+</script>
